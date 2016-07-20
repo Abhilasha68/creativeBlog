@@ -24,9 +24,9 @@ $blogPosts = GetBlogPosts();
 */
 if(isset($_POST["submit"]))
 {
-  $ptitle = ($_POST["ptitle"]);
-  $pcont = ($_POST["pcont"]);
-  $pdate = ($_POST["pdate"]);
+  $ptitle = $_POST["ptitle"];
+  $pcont = $_POST["pcont"];
+  $pdate = $_POST["pdate"];
  
   $query = "INSERT INTO `posts` (`ptitle`,`pcont`,`pdate` ) values ('$ptitle','$pcont','$pdate')";
   $result = $db->query($query);
